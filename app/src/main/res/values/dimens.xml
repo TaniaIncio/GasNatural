@@ -1,0 +1,21 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="text_margin">16dp</dimen>
+
+    <!--texto de botones-->
+    <dimen name="txt_btn_verificar">16sp</dimen>
+
+    <!--tamaño text in textview-->
+    <dimen name="sp_texto_layout_row_opcion">17sp</dimen>
+
+    <!--padding layout-->
+    <dimen name="padd_layout_verificar">17dp</dimen>
+    <dimen name="padd_texto_layout_row_opcion_main">10dp</dimen>
+
+    <!--margin -->
+    <dimen name="marg_layout_row_opcion_main">10dp</dimen>
+    <dimen name="marg_image_layout_row_opcion_main">10dp</dimen>
+
+    <!--height-->
+    <dimen name="height_view_row_opcion_main">2dp</dimen>
+</resources>

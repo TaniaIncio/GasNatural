@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">@color/blue_background</color>
+    <color name="colorPrimaryDark">@color/blue_background</color>
+    <color name="colorAccent">@color/blue_background</color>
+    <color name="blue_background">#00296b</color>
+
+    <!--color textview-->
+    <color name="titulo_gris">#898989</color>
+    <color name="separador_celeste">#e1ecf6</color>
+    <color name="btn_verificar">#0092d3</color>
+    <color name="titulo_appintro">#777777</color>
+    <color name="titulo_azul_appintro">#0d98d6</color>
+</resources>
