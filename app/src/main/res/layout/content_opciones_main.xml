@@ -8,6 +8,11 @@
     tools:context="com.gmd.gasnatural.presentation.activity.OpcionesMainActivity"
     tools:showIn="@layout/activity_opciones_main">
 
-    <include layout="@layout/opciones_menu"></include>
+    <android.support.v7.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/rec_beneficios">
+
+    </android.support.v7.widget.RecyclerView>
 
 </android.support.v4.widget.NestedScrollView>

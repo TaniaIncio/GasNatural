@@ -51,7 +51,8 @@
         android:paddingBottom="@dimen/padd_layout_verificar"
         android:layout_alignParentBottom="true"
         android:id="@+id/linear_verficar_red"
-        android:background="@color/btn_verificar">
+        android:clickable="true"
+        android:background="@drawable/selector_button_verificar">
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

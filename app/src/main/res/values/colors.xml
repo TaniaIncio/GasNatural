@@ -11,4 +11,7 @@
     <color name="btn_verificar">#0092d3</color>
     <color name="titulo_appintro">#777777</color>
     <color name="titulo_azul_appintro">#0d98d6</color>
+
+    <color name="ripple_linear_beneficios">#4d0092d3</color>
+    <color name="ripple_button_verificar">#f2e1ecf6</color>
 </resources>

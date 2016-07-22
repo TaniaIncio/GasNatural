@@ -1,15 +1,21 @@
 package com.gmd.gasnatural.presentation.activity;
 
+import android.app.Activity;
 import android.support.v4.app.FragmentActivity;
 import android.os.Bundle;
 
 import com.gmd.gasnatural.R;
+import com.gmd.gasnatural.presentation.util.Util;
+import com.google.android.gms.common.GooglePlayServicesNotAvailableException;
+import com.google.android.gms.common.GooglePlayServicesRepairableException;
+import com.google.android.gms.location.places.ui.PlacePicker;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
+import com.google.android.gms.location.places.ui.PlacePicker;
 
 public class MapUbicacionActivity extends FragmentActivity implements OnMapReadyCallback {
 
@@ -32,6 +38,8 @@ public class MapUbicacionActivity extends FragmentActivity implements OnMapReady
         LatLng sydney = new LatLng(-34, 151);
         mMap.addMarker(new MarkerOptions().position(sydney).title("Marker in Sydney"));
         mMap.moveCamera(CameraUpdateFactory.newLatLng(sydney));
-        mMap.setMyLocationEnabled(true);
+
+ /*       mMap.setMyLocationEnabled(true);*/
     }
+
 }
