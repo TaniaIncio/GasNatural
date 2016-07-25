@@ -102,8 +102,8 @@ public class OpcionesMainActivity extends AppCompatActivity implements OpcionesM
             if (resultCode == RESULT_OK) {
                 Place place = PlacePicker.getPlace(data, this);
                 String toastMsg = String.format("Place: %s", place.getName());
-                Toast.makeText(this, toastMsg, Toast.LENGTH_LONG).show();
-               // startActivity(new Intent(this,));
+             //   Toast.makeText(this, toastMsg, Toast.LENGTH_LONG).show();
+                startActivity(new Intent(this,MensajeActivity.class));
             }
         }
     }
