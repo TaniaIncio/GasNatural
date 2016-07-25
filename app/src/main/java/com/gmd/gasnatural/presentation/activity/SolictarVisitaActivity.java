@@ -5,12 +5,11 @@ import android.os.Bundle;
 
 import com.gmd.gasnatural.R;
 
-public class MensajeActivity extends AppCompatActivity {
+public class SolictarVisitaActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_mensaje);
-        getSupportActionBar().hide();
+        setContentView(R.layout.activity_solictar_visita);
     }
 }
