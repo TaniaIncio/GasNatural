@@ -1,4 +1,6 @@
 package com.gmd.gasnatural.presentation.activity;
+import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
@@ -6,17 +8,22 @@ import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.LinearLayout;
+import android.widget.Toast;
 
 import com.gmd.gasnatural.R;
 import com.gmd.gasnatural.presentation.adapter.AdapterRecyclerBeneficios;
+import com.gmd.gasnatural.presentation.presenter.OpcionesMainPresenter;
+import com.gmd.gasnatural.presentation.view.OpcionesMainView;
 import com.google.android.gms.common.GooglePlayServicesNotAvailableException;
 import com.google.android.gms.common.GooglePlayServicesRepairableException;
+import com.google.android.gms.location.places.Place;
 import com.google.android.gms.location.places.ui.PlacePicker;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
 
-public class OpcionesMainActivity extends AppCompatActivity{
+public class OpcionesMainActivity extends AppCompatActivity implements OpcionesMainView, View.OnClickListener
+{
 
     @Bind(R.id.linear_verficar_red)
     LinearLayout linearLayout;
@@ -27,48 +34,79 @@ public class OpcionesMainActivity extends AppCompatActivity{
     RecyclerView.LayoutManager mLayoutManager;
     AdapterRecyclerBeneficios mAdapterBeneficios;
 
+    OpcionesMainPresenter presenter;
+    int PLACE_PICKER_REQUEST = 1;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_opciones_main);
         ButterKnife.bind(this);
         setSupportActionBar(toolbar);
-    //    toolbar.setTitle(getResources().getString(R.string.title_activity_opciones_main));
-
         mLayoutManager = new LinearLayoutManager(getApplicationContext(),LinearLayoutManager.VERTICAL,false);
-        String[] array = getResources().getStringArray(R.array.array_elements_recycler);
-        mAdapterBeneficios = new AdapterRecyclerBeneficios(array);
         recBeneficios.setLayoutManager(mLayoutManager);
+        presenter = new OpcionesMainPresenter();
+        presenter.setView(this);
+
+    }
+
+    @Override
+    protected void onResume(){
+        super.onResume();
+        presenter.getListOpciones();
+        linearLayout.setOnClickListener(this);
+    }
+
+    @Override
+    public void showListOpciones(String[] opciones) {
+        mAdapterBeneficios = new AdapterRecyclerBeneficios(opciones);
         recBeneficios.setAdapter(mAdapterBeneficios);
     }
 
     @Override
-    protected void onResume() {
-        super.onResume();
-    /*    linearLayout.setOnClickListener(v->{
-          //  showMapUbicacion();
-        });*/
+    public Context getContext() {
+        return this;
     }
 
-    int PLACE_PICKER_REQUEST = 1;
+
+    @Override
+    public void onClick(View v) {
+        switch (v.getId()){
+            case R.id.linear_verficar_red:
+                showMapUbicacion();
+        }
+    }
+
     public void showMapUbicacion(){
         try{
             //if (Util.checkGpsActived(this)){
-                PlacePicker.IntentBuilder builder = new PlacePicker.IntentBuilder();
-                try {
-                    startActivityForResult(builder.build(this), PLACE_PICKER_REQUEST);
-                    //  btnLocalizacion.setEnabled(false);
-                } catch (GooglePlayServicesRepairableException e) {
-                    e.printStackTrace();
-                    //     btnLocalizacion.setEnabled(true);
-                } catch (GooglePlayServicesNotAvailableException e) {
-                    e.printStackTrace();
-                    //   btnLocalizacion.setEnabled(true);
-                }
-          //  }
+            PlacePicker.IntentBuilder builder = new PlacePicker.IntentBuilder();
+            try {
+                startActivityForResult(builder.build(this), PLACE_PICKER_REQUEST);
+                //  btnLocalizacion.setEnabled(false);
+            } catch (GooglePlayServicesRepairableException e) {
+                e.printStackTrace();
+                //     btnLocalizacion.setEnabled(true);
+            } catch (GooglePlayServicesNotAvailableException e) {
+                e.printStackTrace();
+                //   btnLocalizacion.setEnabled(true);
+            }
+            //  }
         }catch(Exception e){
             e.printStackTrace();
         }
     }
+
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        if (requestCode == PLACE_PICKER_REQUEST) {
+            if (resultCode == RESULT_OK) {
+                Place place = PlacePicker.getPlace(data, this);
+                String toastMsg = String.format("Place: %s", place.getName());
+                Toast.makeText(this, toastMsg, Toast.LENGTH_LONG).show();
+               // startActivity(new Intent(this,));
+            }
+        }
+    }
+
 
 }

@@ -14,7 +14,7 @@ public class OpcionesMainPresenter implements MvpPresenter<OpcionesMainView>, Op
     @Override
     public void setView(OpcionesMainView view) {
         this.view = view;
-        interactor = new OpcionesMainInteractor(this);
+        interactor = new OpcionesMainInteractor(this,view);
     }
 
     @Override
@@ -25,5 +25,9 @@ public class OpcionesMainPresenter implements MvpPresenter<OpcionesMainView>, Op
     @Override
     public void onResponse(String[] arrayOpciones) {
         view.showListOpciones(arrayOpciones);
+    }
+
+    public void getListOpciones(){
+        interactor.getListOpciones();
     }
 }
