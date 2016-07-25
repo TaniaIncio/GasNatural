@@ -42,5 +42,7 @@
     <!--placeholders-Ahorro-->
     <string name="precio_placeholder">Costo del balón</string>
     <string name="dias_placeholder">Duración del balón</string>
+    <string name="dias">Días</string>
+    <string name="precio">Precio</string>
 
 </resources>
