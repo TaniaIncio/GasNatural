@@ -3,7 +3,7 @@ ext {
     supportLibrayVersion = '23.3.0'
     butterknifeVersion = '7.0.1'
     appintroVersion = '4.0.0'
-    playservicesVersion = '9.0.2'
+    playservicesVersion = '8.4.0'
     retrolambdaVersion = '3.2.5'
     supportDependencies = [
             appcompat: "com.android.support:appcompat-v7:${supportLibrayVersion}",
