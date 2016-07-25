@@ -16,6 +16,7 @@
     <!--titulo de botones-->
     <string name="btn_verificar_red">Verificar si la red pasa por mi casa</string>
     <string name="btn_solicitar_visita">Solicitar visita</string>
+    <string name="btn_solicitar_ahorro">Calcular Ahorro</string>
 
     <!--titulos intro app-->
     <string name="titulo_slide1">AHORRO</string>
@@ -36,4 +37,10 @@
 
     <!--titulos txtview-->
     <string name="txt_nogracias">No gracias</string>
+    
+    
+    <!--placeholders-Ahorro-->
+    <string name="precio_placeholder">Costo del balón</string>
+    <string name="dias_placeholder">Duración del balón</string>
+
 </resources>
