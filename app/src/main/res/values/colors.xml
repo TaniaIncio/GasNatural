@@ -15,4 +15,6 @@
 
     <color name="ripple_linear_beneficios">#4d0092d3</color>
     <color name="ripple_button_verificar">#f2e1ecf6</color>
+    <color name="btn_solictar_visita">#FAFAFA</color>
+
 </resources>

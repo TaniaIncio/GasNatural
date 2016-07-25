@@ -42,7 +42,8 @@
             android:name=".presentation.activity.MapUbicacionActivity"
             android:label="@string/title_activity_map_ubicacion" />
         <activity android:name=".presentation.activity.MensajeActivity" />
-        <activity android:name=".presentation.activity.SolictarVisitaActivity"></activity>
+        <activity android:name=".presentation.activity.SolicitarVisitaActivity" />
+        <activity android:name=".presentation.activity.TerminosCondicionesActivity"></activity>
     </application>
 
 </manifest>

@@ -15,7 +15,7 @@
 
     <!--titulo de botones-->
     <string name="btn_verificar_red">Verificar si la red pasa por mi casa</string>
-    <string name="btn_solicitar_visita">Solictar visita</string>
+    <string name="btn_solicitar_visita">Solicitar visita</string>
 
     <!--titulos intro app-->
     <string name="titulo_slide1">AHORRO</string>
@@ -31,6 +31,9 @@
     <!--titulos mensajes-->
     <string name="title_esperar">Un momento por favor estamos estamos verificando si la red de gas natural pasa
     por su hogar</string>
-     <string name="title_red_gas">¡La red de gas natural pasa por su hogar!</string>
+    <string name="title_red_gas">¡La red de gas natural pasa por su hogar!</string>
     <string name="title_solicitar_visita">Usted puede solicitar la visita de un instalador</string>
+
+    <!--titulos txtview-->
+    <string name="txt_nogracias">No gracias</string>
 </resources>
