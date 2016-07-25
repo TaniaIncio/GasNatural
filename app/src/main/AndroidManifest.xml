@@ -41,7 +41,8 @@
         <activity
             android:name=".presentation.activity.MapUbicacionActivity"
             android:label="@string/title_activity_map_ubicacion" />
-        <activity android:name=".presentation.activity.MensajeActivity"></activity>
+        <activity android:name=".presentation.activity.MensajeActivity" />
+        <activity android:name=".presentation.activity.AhorroActivity"></activity>
     </application>
 
 </manifest>
