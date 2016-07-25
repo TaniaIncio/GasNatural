@@ -21,6 +21,10 @@
     <dimen name="marg_image_layout_row_opcion_main">10dp</dimen>
     <dimen name="marg_txt_linear_mensaje">10dp</dimen>
     <dimen name="marg_btn_inferior">10dp</dimen>
+    <dimen name="marg_icon_toolbar">8dp</dimen>
+
+    <!--radius-->
+    <dimen name="rad_caja_busqueda">8dp</dimen>
 
     <!--height-->
     <dimen name="height_view_row_opcion_main">2dp</dimen>

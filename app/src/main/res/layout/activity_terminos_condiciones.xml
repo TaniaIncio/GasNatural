@@ -5,17 +5,17 @@
     android:layout_height="match_parent"
     android:background="@color/linear_mensaje"
     tools:context="com.gmd.gasnatural.presentation.activity.TerminosCondicionesActivity">
-    <TextView
+    <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textColor="@android:color/white"
-        android:layout_alignParentRight="true"
+        android:layout_alignParentLeft="true"
         android:gravity="center"
         android:padding="@dimen/padd_texto_superior"
+        android:src="@mipmap/close"
         android:minHeight="?android:attr/listPreferredItemHeight"
-        android:clickable="true"
-        android:background="?android:attr/selectableItemBackground"
-        android:text="@string/txt_nogracias"/>
+        android:id="@+id/btn_close_terminoscondiciones"
+        android:clickable="true"/>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -24,55 +24,44 @@
         android:background="@drawable/selector_button_solicitarvisita"
         android:gravity="center"
         android:clickable="true"
+        android:id="@+id/linear_continuar"
         >
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="@dimen/sp_texto_boton_solictarvisita"
             android:textStyle="bold"
-            android:text="@string/btn_solicitar_visita"/>
+            android:text="@string/btn_continuar"/>
     </LinearLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:layout_marginTop="?android:attr/actionBarSize"
-        android:gravity="center">
-        <LinearLayout
+        <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:orientation="vertical"
-            android:layout_weight="1"
-            android:gravity="center|bottom">
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@mipmap/red_gas" />
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:orientation="vertical"
-            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:layout_marginTop="?android:attr/actionBarSize"
             android:layout_marginBottom="?android:attr/listPreferredItemHeight"
-            android:gravity="center">
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textSize="@dimen/sp_texto_principal_layout_mensaje"
-                android:textColor="@android:color/white"
-                android:textAlignment="center"
-                android:layout_margin="@dimen/marg_txt_linear_mensaje"
-                android:text="@string/title_red_gas"/>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textSize="@dimen/sp_texto_layout_mensaje"
-                android:textColor="@android:color/white"
-                android:textAlignment="center"
-                android:layout_margin="@dimen/marg_txt_linear_mensaje"
-                android:text="@string/title_solicitar_visita"/>
-        </LinearLayout>
+            android:fillViewport="true">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                >
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/sp_texto_principal_layout_mensaje"
+                    android:textColor="@android:color/white"
+                    android:layout_margin="@dimen/marg_txt_linear_mensaje"
+                    android:paddingTop="@dimen/padd_texto_superior"
+                    android:text="@string/title_terminos_condiciones"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:textColor="@android:color/white"
+                    android:layout_margin="@dimen/marg_txt_linear_mensaje"
+                    android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam efficitur sollicitudin felis eu commodo. Pellentesque vel ipsum ac urna mattis sagittis gravida eu sapien. Quisque neque nisl, laoreet in sem non, feugiat hendrerit diam. Praesent quam eros, faucibus eu eleifend quis, imperdiet quis massa.
 
-    </LinearLayout>
+Nam in auctor ante. Nam consequat suscipit hendrerit. Donec vehicula suscipit erat a sollicitudin. Fusce commodo aliquam tortor vel convallis. Nam fermentum purus eu nisi tempor, vel sodales dolor consequat.
+
+Curabitur fringilla mi massa. Praesent a vehicula nibh. Vivamus molestie consequat libero, eu ultricies quam molestie ac. Fusce sagittis diam augue. Nulla facilisi. Aenean nec felis at metus pretium commo"/>
+            </LinearLayout>
+        </ScrollView>
 </RelativeLayout>

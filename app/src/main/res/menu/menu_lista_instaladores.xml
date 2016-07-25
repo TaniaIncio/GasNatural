@@ -1,0 +1,17 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.gmd.gasnatural.presentation.activity.OpcionesMainActivity">
+    <item
+        android:id="@+id/action_buscar"
+        android:orderInCategory="100"
+        android:title="@string/action_settings"
+        android:icon="@mipmap/icon_buscar"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/action_settings"
+        android:orderInCategory="100"
+        android:title="@string/action_settings"
+        android:icon="@mipmap/icono_configuracion"
+        app:showAsAction="ifRoom" />
+</menu>

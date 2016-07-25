@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:gravity="center_vertical"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/marg_icon_toolbar"
+            android:layout_marginRight="@dimen/marg_icon_toolbar"
+            android:id="@+id/icon_back_listainstaladores"
+            android:src="@mipmap/flechaazul"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/txt_titulo_listainstaladores"
+            style="@style/TextAppearance.AppCompat.Medium"
+            android:text="@string/app_name"/>
+    </LinearLayout>
+</RelativeLayout>
