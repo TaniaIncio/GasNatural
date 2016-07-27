@@ -26,6 +26,7 @@ public class ListDistritoFragment extends Fragment {
     RecyclerView recDistritos;
     AdapterRecyclerDistritos adapterDistritos;
     RecyclerView.LayoutManager mLayoutManager;
+    public static String TAG = "ListDistritoFragment";
 
     public ListDistritoFragment() {
         // Required empty public constructor

@@ -3,6 +3,7 @@ package com.gmd.gasnatural.presentation.fragment;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentTransaction;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -45,7 +46,10 @@ public class FiltrosFragment extends Fragment implements View.OnClickListener{
     public void onClick(View v) {
         switch (v.getId()){
             case R.id.txt_distrito:
-                getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.fragment_filtros, new ListDistritoFragment()).commit();
+                FragmentTransaction ft=  getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.fragment_filtros, new ListDistritoFragment());
+                ft.addToBackStack(ListDistritoFragment.TAG);
+                ft.commit();
+                break;
         }
     }
 }

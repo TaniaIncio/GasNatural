@@ -23,7 +23,7 @@
                 android:padding="10dp"
                 android:clickable="true"
                 android:textAllCaps="true"
-                android:background="@drawable/rectangle_withborde_white"
+                android:background="@drawable/selector_button_aplicar_gris"
                 android:layout_alignParentBottom="true"
                 android:textColor="@android:color/white"/>
         </LinearLayout>

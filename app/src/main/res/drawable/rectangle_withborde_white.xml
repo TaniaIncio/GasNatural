@@ -4,4 +4,5 @@
 <stroke android:color="@android:color/white" android:width="@dimen/height_separator">
 </stroke>
     <corners android:radius="@dimen/rad_rectangle"></corners>
+    <solid android:color="@color/black_transp_5"></solid>
 </shape>

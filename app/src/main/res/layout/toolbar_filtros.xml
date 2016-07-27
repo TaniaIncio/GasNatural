@@ -30,8 +30,9 @@
                 android:padding="10dp"
                 android:clickable="true"
                 android:textAllCaps="true"
-                android:background="@drawable/rectangle_withborde"
+                android:background="@drawable/selector_button_aplicar"
                 android:layout_alignParentBottom="true"
                 android:textColor="@color/titulo_azul_appintro"/>
+            <!--android:background="@drawable/rectangle_withborde_celeste"-->
         </LinearLayout>
 </LinearLayout>

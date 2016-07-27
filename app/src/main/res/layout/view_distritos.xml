@@ -10,14 +10,14 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@drawable/rectangle_dialog_distrito"
-        android:layout_margin="20dp"
+        android:layout_margin="15dp"
         android:orientation="vertical">
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:gravity="center_vertical"
             android:minHeight="?android:attr/listPreferredItemHeight"
-            android:layout_marginLeft="@dimen/marg_icon_toolbar"
+            android:layout_marginLeft="@dimen/marg_layout_row_opcion_main"
             android:textColor="@color/grey_800"
             android:textStyle="bold"
             android:textSize="@dimen/sp_activityfiltro_titulos"
