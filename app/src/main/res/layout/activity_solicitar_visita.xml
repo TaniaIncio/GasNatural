@@ -24,6 +24,7 @@
         android:background="@drawable/selector_button_solicitarvisita"
         android:gravity="center"
         android:clickable="true"
+        android:id="@+id/linear_solicitar_visita"
         >
         <TextView
             android:layout_width="wrap_content"

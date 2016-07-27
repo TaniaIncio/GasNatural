@@ -20,7 +20,7 @@ android {
         }
     }
     /**Soporte sintaxis lambda*/
-  /*  compileOptions {
+    /*  compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }*/
@@ -40,11 +40,17 @@ dependencies {
     testCompile 'junit:junit:4.12'
 }
 dependencies {
+    compile 'com.android.support:support-v4:23.+'
+}
+dependencies {
+    compile 'com.android.support:support-v4:23.+'
+}
+dependencies {
     compile supportDependencies.appcompat
     compile supportDependencies.design
     compile supportDependencies.butterknife
     compile supportDependencies.cardview
     compile supportDependencies.appintro
     compile supportDependencies.play_services
-  /*  compile supportDependencies.retrolambda*/
+    /*  compile supportDependencies.retrolambda*/
 }

@@ -11,23 +11,23 @@ import com.gmd.gasnatural.R;
 /**
  * Created by tincio on 22/07/2016.
  */
-public class AdapterRecyclerBeneficios extends RecyclerView.Adapter<AdapterRecyclerBeneficios.ViewHolderItem> {
+public class AdapterRecyclerInstaladores extends RecyclerView.Adapter<AdapterRecyclerInstaladores.ViewHolderItem> {
 
     String[] arrayString;
 
-    public AdapterRecyclerBeneficios(String[] arrayString){
+    public AdapterRecyclerInstaladores(String[] arrayString){
         this.arrayString = arrayString;
     }
     @Override
     public ViewHolderItem onCreateViewHolder(ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.row_recycler_beneficios, parent, false);
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.row_recycler_instaladores, parent, false);
         ViewHolderItem viewHolder = new ViewHolderItem(view);
         return viewHolder;
     }
 
     @Override
     public void onBindViewHolder(ViewHolderItem holder, int position) {
-        holder.txtItemRecycler.setText(arrayString[position]);
+        //holder.txtItemRecycler.setText(arrayString[position]);
     }
 
     @Override
@@ -40,13 +40,13 @@ public class AdapterRecyclerBeneficios extends RecyclerView.Adapter<AdapterRecyc
         TextView txtItemRecycler;
         public ViewHolderItem(View itemView) {
             super(itemView);
-            txtItemRecycler = (TextView)itemView.findViewById(R.id.txt_row_beneficios);
+        /*    txtItemRecycler = (TextView)itemView.findViewById(R.id.txt_row_beneficios);
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
 
                 }
-            });
+            });*/
         }
     }
 

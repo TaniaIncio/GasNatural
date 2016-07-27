@@ -8,6 +8,7 @@
     <!--color textview-->
     <color name="titulo_gris">#898989</color>
     <color name="separador_celeste">#e1ecf6</color>
+    <color name="separador_gris">#EEEEEE</color>
     <color name="btn_verificar">#0092d3</color>
     <color name="titulo_appintro">#777777</color>
     <color name="titulo_azul_appintro">#0d98d6</color>
@@ -16,6 +17,15 @@
     <color name="ripple_linear_beneficios">#4d0092d3</color>
     <color name="ripple_button_verificar">#f2e1ecf6</color>
     <color name="btn_solictar_visita">#FAFAFA</color>
+    <color name="txt_row_nombreempresa">#1b5091</color>
+    <color name="red_900">#B71C1C</color>
+    <color name="gray_textview_app">#787878</color>
+    <color name="grey_900">#212121</color>
+    <color name="grey_800">#424242</color>
+    <color name="blue_800">#1565C0</color>
+
+    <color name="black_transp">#A6000000</color>
+
 
 
 

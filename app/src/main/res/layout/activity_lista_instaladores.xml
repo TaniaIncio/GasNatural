@@ -3,14 +3,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
     tools:context="com.gmd.gasnatural.presentation.activity.ListaInstaladoresActivity">
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:minHeight="?android:attr/listPreferredItemHeight"
         android:background="@color/separador_celeste"
-        android:padding="5dp"
+        android:padding="@dimen/marg_icon_toolbar"
         android:gravity="center_vertical">
         <TextView
             android:layout_width="0dp"
@@ -20,15 +20,18 @@
             android:layout_marginRight="@dimen/text_margin"
             android:layout_weight="1"
             android:textColor="@color/linear_mensaje"/>
-        <TextView
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="2"
-            android:background="@drawable/caja_resultados_instaladores"
-            android:textColor="@android:color/white"
-            android:maxLines="1"
-            android:ellipsize="end"
-            android:text="San Martin de Porres"/>
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="@drawable/caja_resultados_instaladores"
+                android:layout_weight="2"
+                android:textColor="@android:color/white"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:drawableRight="@mipmap/ic_cancel_white_18dp"
+                android:text="San Martin de Porres"/>
+
         <TextView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -37,4 +40,10 @@
             android:layout_marginRight="@dimen/marg_icon_toolbar"
             android:text="22"/>
     </LinearLayout>
+    <android.support.v7.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:listitem="@layout/row_recycler_instaladores"
+        android:id="@+id/rec_instaladores">
+    </android.support.v7.widget.RecyclerView>
 </LinearLayout>
