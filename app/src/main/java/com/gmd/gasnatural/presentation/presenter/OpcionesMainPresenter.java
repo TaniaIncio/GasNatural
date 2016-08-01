@@ -1,5 +1,7 @@
 package com.gmd.gasnatural.presentation.presenter;
 
+import com.gmd.gasnatural.data.services.request.CoberturaServicioGasNaturalInRO;
+import com.gmd.gasnatural.data.services.response.CoberturaServicioGasNaturalOutRO;
 import com.gmd.gasnatural.domain.callback.OpcionesMainCallback;
 import com.gmd.gasnatural.domain.interactor.OpcionesMainInteractor;
 import com.gmd.gasnatural.presentation.view.OpcionesMainView;
@@ -14,7 +16,7 @@ public class OpcionesMainPresenter implements MvpPresenter<OpcionesMainView>, Op
     @Override
     public void setView(OpcionesMainView view) {
         this.view = view;
-        interactor = new OpcionesMainInteractor(this,view);
+        interactor = new OpcionesMainInteractor(this,view.getContext());
     }
 
     @Override
@@ -22,12 +24,16 @@ public class OpcionesMainPresenter implements MvpPresenter<OpcionesMainView>, Op
         this.view = null;
     }
 
+    /**Para mostrar listado de opciones*/
     @Override
     public void onResponse(String[] arrayOpciones) {
         view.showListOpciones(arrayOpciones);
     }
 
+
     public void getListOpciones(){
         interactor.getListOpciones();
     }
+    /**fin mostrar listado de opciones*/
+
 }

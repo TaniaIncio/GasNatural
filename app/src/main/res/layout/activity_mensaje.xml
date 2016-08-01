@@ -6,7 +6,7 @@
     android:background="@color/linear_mensaje"
     android:gravity="center"
     android:orientation="vertical"
-    tools:context="com.gmd.gasnatural.presentation.activity.MensajeActivity">
+    tools:context=".presentation.activity.MensajeVerificandoActivity">
 
     <ImageView
         android:layout_width="wrap_content"

@@ -5,7 +5,7 @@ import com.gmd.gasnatural.data.services.response.CoberturaServicioGasNaturalOutR
 /**
  * Created by tincio on 22/07/2016.
  */
-public interface OpcionesMainView extends MvpView {
+public interface MensajeVerificandoView extends MvpView {
 
-    public void showListOpciones(String[] opciones);
+    public void showCoberturaOutRO(CoberturaServicioGasNaturalOutRO mCoberturaOutRO, String message);
 }

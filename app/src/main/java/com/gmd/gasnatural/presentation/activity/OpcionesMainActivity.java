@@ -8,7 +8,6 @@ import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.LinearLayout;
-import android.widget.Toast;
 
 import com.gmd.gasnatural.R;
 import com.gmd.gasnatural.presentation.adapter.AdapterRecyclerBeneficios;
@@ -64,17 +63,11 @@ public class OpcionesMainActivity extends AppCompatActivity implements OpcionesM
     }
 
     @Override
-    public Context getContext() {
-        return this;
-    }
-
-
-    @Override
     public void onClick(View v) {
         switch (v.getId()){
             case R.id.linear_verficar_red:
-                startActivity(new Intent(this,ListaInstaladoresActivity.class));
-                //showMapUbicacion();
+                showMapUbicacion();
+                break;
         }
     }
 
@@ -102,12 +95,17 @@ public class OpcionesMainActivity extends AppCompatActivity implements OpcionesM
         if (requestCode == PLACE_PICKER_REQUEST) {
             if (resultCode == RESULT_OK) {
                 Place place = PlacePicker.getPlace(data, this);
-                String toastMsg = String.format("Place: %s", place.getName());
-             //   Toast.makeText(this, toastMsg, Toast.LENGTH_LONG).show();
-                startActivity(new Intent(this,MensajeActivity.class));
+                Intent intent = new Intent(this,MensajeVerificandoActivity.class);
+                intent.putExtra("latitud", place.getLatLng().latitude);
+                intent.putExtra("longitud", place.getLatLng().longitude);
+                startActivity(intent);
             }
         }
     }
 
 
+    @Override
+    public Context getContext() {
+        return this;
+    }
 }

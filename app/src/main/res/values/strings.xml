@@ -36,7 +36,13 @@
     <string name="title_esperar">Un momento por favor estamos estamos verificando si la red de gas natural pasa
     por su hogar</string>
     <string name="title_red_gas">¡La red de gas natural pasa por su hogar!</string>
+    <string name="title_red_gas_fise">¡La red de gas natural pasa por tu hogar y calificas como beneficiario para recibir financiamiento para la instalación de gas natural!</string>
+    <string name="title_red_gas_promocion">¡La red de gas natural pasa por tu hogar y calificas como beneficiario FISE y de promocion</string>
+    <string name="title_red_gas_nopasa">La red de gas natural no pasa por su hogar!</string>
     <string name="title_solicitar_visita">Usted puede solicitar la visita de un instalador</string>
+    <string name="title_solicitar_visita_fise">Este beneficio es otorgado por el fondo de Inclusión Social Energético (FISE) para que puedas realizar la instalación sin cuota inicial ni interes, y lo puedas pagar hasta en 5 años</string>
+    <string name="title_solicitar_visita_promocion">Este beneficio es otorgado por el fondo de Inclusión Social Energético (FISE) para que puedas realizar la instalación sin cuota inicial ni interes, y lo puedas pagar hasta en 5 años</string>
+    <string name="title_solicitar_visita_nopasa">Usted no puede solicitar la visita de un instalador</string>
 
     <!--titulos txtview-->
     <string name="txt_nogracias">No gracias</string>
@@ -70,5 +76,9 @@
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <!--old project-->
+    <string name="btn.si">Si</string>
+    <string name="btn.no">No</string>
 
 </resources>

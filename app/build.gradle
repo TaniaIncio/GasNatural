@@ -39,12 +39,7 @@ dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
     testCompile 'junit:junit:4.12'
 }
-dependencies {
-    compile 'com.android.support:support-v4:23.+'
-}
-dependencies {
-    compile 'com.android.support:support-v4:23.+'
-}
+
 dependencies {
     compile supportDependencies.appcompat
     compile supportDependencies.design
@@ -52,5 +47,7 @@ dependencies {
     compile supportDependencies.cardview
     compile supportDependencies.appintro
     compile supportDependencies.play_services
+    compile supportDependencies.volley
+    compile supportDependencies.gson
     /*  compile supportDependencies.retrolambda*/
 }

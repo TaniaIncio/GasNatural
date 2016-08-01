@@ -28,6 +28,13 @@
     <color name="black_transp_65">#A6000000</color>
     <color name="black_transp_5">#0D000000</color>
 
+    <!--old porject-->
+    <color name="white">#fff</color>
+    <color name="gris_etiqueta_negra">#626262</color>
+    <color name="gris_fondo">#f0f0f0</color>
+    <color name="celeste_boton">#008be8</color>
+    <color name="azul_boton_saltar">#001a4c</color>
+
 
 
 

@@ -18,21 +18,6 @@ public class AppintroActivity extends AppIntro {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         getSupportActionBar().hide();
-       // setContentView(R.layout.activity_appintro);
-       /* Toolbar toolbar = (Toolbar)findViewById(R.id.toolbar_intro);
-        setSupportActionBar(toolbar);*/
-        //setSupportActionBar(R.id.app_bar_layout);
-        //set transparent
-      /*  getSupportActionBar().setBackgroundDrawable(new ColorDrawable(Color.WHITE));
-        getSupportActionBar().setElevation(0);
-        getSupportActionBar().setTitle("");*/
-        /*View view = getLayoutInflater().inflate(R.layout.toolbar_intro, null);
-        Toolbar toolbar = (Toolbar) view;
-        setSupportActionBar(toolbar);*/
-
-        /*Toolbar toolbar = (Toolbar) getLayoutInflater().inflate(R.layout.toolbar_intro, null);
-        setSupportActionBar(toolbar);
-        getSupportActionBar().setDisplayShowTitleEnabled(false);*/
     }
 
     @Override
@@ -54,9 +39,4 @@ public class AppintroActivity extends AppIntro {
 
     }
 
-   /* @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.menu_intro,menu);
-        return super.onCreateOptionsMenu(menu);
-    }*/
 }
