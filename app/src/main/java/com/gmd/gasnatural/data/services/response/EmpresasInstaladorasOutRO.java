@@ -13,7 +13,7 @@ public class EmpresasInstaladorasOutRO {
     private Integer resultCode;
     @SerializedName("empresasInstaladoras")
     @Expose
-    private List<EmpresasInstaladora> empresasInstaladoras = new ArrayList<EmpresasInstaladora>();
+    private List<EmpresaInstaladora> empresasInstaladoras = new ArrayList<EmpresaInstaladora>();
 
     /**
      * 
@@ -38,7 +38,7 @@ public class EmpresasInstaladorasOutRO {
      * @return
      *     The empresasInstaladoras
      */
-    public List<EmpresasInstaladora> getEmpresasInstaladoras() {
+    public List<EmpresaInstaladora> getEmpresasInstaladoras() {
         return empresasInstaladoras;
     }
 
@@ -47,7 +47,7 @@ public class EmpresasInstaladorasOutRO {
      * @param empresasInstaladoras
      *     The empresasInstaladoras
      */
-    public void setEmpresasInstaladoras(List<EmpresasInstaladora> empresasInstaladoras) {
+    public void setEmpresasInstaladoras(List<EmpresaInstaladora> empresasInstaladoras) {
         this.empresasInstaladoras = empresasInstaladoras;
     }
 

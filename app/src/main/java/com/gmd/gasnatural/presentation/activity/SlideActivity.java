@@ -21,6 +21,7 @@ public class SlideActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_slide);
+        getSupportActionBar().hide();
         mViewPager  = (ViewPager) findViewById(R.id.viewPager);
         mViewPager .setAdapter(new CustomPagerAdapter(this));
 

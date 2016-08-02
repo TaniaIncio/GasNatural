@@ -16,12 +16,16 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.gmd.gasnatural.R;
+import com.gmd.gasnatural.data.services.request.EmpresaInstaladoraInRO;
+import com.gmd.gasnatural.data.services.response.EmpresasInstaladorasOutRO;
 import com.gmd.gasnatural.presentation.adapter.AdapterRecyclerInstaladores;
+import com.gmd.gasnatural.presentation.presenter.EmpresaInstaladoraPresenter;
+import com.gmd.gasnatural.presentation.view.ListaInstaladoresView;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
 
-public class ListaInstaladoresActivity extends AppCompatActivity implements View.OnClickListener{
+public class ListaInstaladoresActivity extends AppCompatActivity implements ListaInstaladoresView, View.OnClickListener{
 
     @Bind(R.id.icon_back_listainstaladores)
     ImageView imgBack;
@@ -31,6 +35,7 @@ public class ListaInstaladoresActivity extends AppCompatActivity implements View
     RecyclerView recInstaladores;
     AdapterRecyclerInstaladores adapterInstaladores;
     RecyclerView.LayoutManager mLayoutManager;
+    EmpresaInstaladoraPresenter presenter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,7 +44,8 @@ public class ListaInstaladoresActivity extends AppCompatActivity implements View
         getSupportActionBar().setDisplayOptions(ActionBar.DISPLAY_SHOW_CUSTOM);
         getSupportActionBar().setCustomView(R.layout.toolbar_lista_instaladores);
         ButterKnife.bind(this);
-
+        presenter = new EmpresaInstaladoraPresenter();
+        presenter.setView(this);
     }
 
     @Override
@@ -48,9 +54,16 @@ public class ListaInstaladoresActivity extends AppCompatActivity implements View
         txtTituloToolbar.setText(getResources().getString(R.string.titulo_lista_instaladores));
         mLayoutManager = new LinearLayoutManager(getApplicationContext(),LinearLayoutManager.VERTICAL,false);
         recInstaladores.setLayoutManager(mLayoutManager);
-        String[] array = new String[6];
-        adapterInstaladores = new AdapterRecyclerInstaladores(array);
-        recInstaladores.setAdapter(adapterInstaladores);
+        /****/
+        EmpresaInstaladoraInRO mEmpresa = new EmpresaInstaladoraInRO();
+        mEmpresa.setToken("");
+        mEmpresa.setAppInvoker("GMD");
+        mEmpresa.setAsociadoFiseEmpresaInstaladora("S");
+        mEmpresa.setIdCategoriaInstalacion(1);
+        mEmpresa.setUbigeoEmpresaInstaladora("150135");
+        mEmpresa.setTipoPersonaEmpresaInstaladora("J");
+        presenter.getListaEmpresasInstaladoras(mEmpresa);
+
     }
 
     @Override
@@ -104,5 +117,17 @@ public class ListaInstaladoresActivity extends AppCompatActivity implements View
             case R.id.icon_back_listainstaladores:
                 onBackPressed();break;
         }
+    }
+
+    @Override
+    public void showEmpresasInstaladorasOutRO(EmpresasInstaladorasOutRO mEmpresasInstaladorasOutRO, String message) {
+        if(mEmpresasInstaladorasOutRO.getResultCode()==1)
+            adapterInstaladores = new AdapterRecyclerInstaladores(mEmpresasInstaladorasOutRO.getEmpresasInstaladoras());
+        recInstaladores.setAdapter(adapterInstaladores);
+    }
+
+    @Override
+    public Context getContext() {
+        return this;
     }
 }

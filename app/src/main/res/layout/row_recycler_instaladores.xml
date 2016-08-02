@@ -37,6 +37,7 @@
                     android:layout_marginLeft="@dimen/marg_left_rowrecyclerinstalador_registro"
                     android:textColor="@android:color/black"
                     android:textSize="@dimen/sp_texto_nroregistroinstalador"
+                    android:id="@+id/txt_idempresa"
                     android:text="10301"/>
             </LinearLayout>
             <LinearLayout
@@ -51,6 +52,7 @@
                     android:textColor="@color/txt_row_nombreempresa"
                     android:textSize="@dimen/sp_texto_nroregistroinstalador"
                     android:textStyle="normal"
+                    android:id="@+id/txt_nombre_empresainstaladora"
                     android:text="Asociados en ingenieria y soluciones Teconologicas SAC"/>
             </LinearLayout>
             <LinearLayout
@@ -71,6 +73,7 @@
                     android:textSize="@dimen/sp_texto_nroregistroinstalador"
                     android:maxLines="1"
                     android:ellipsize="end"
+                    android:id="@+id/txt_precioestimado"
                     android:text="S/ 1350.00"/>
             </LinearLayout>
         </LinearLayout>

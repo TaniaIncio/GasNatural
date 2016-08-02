@@ -4,7 +4,7 @@ package com.gmd.gasnatural.data.services.response;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
-public class EmpresasInstaladora {
+public class EmpresaInstaladora {
 
     @SerializedName("idCategoriaInstalacion")
     @Expose

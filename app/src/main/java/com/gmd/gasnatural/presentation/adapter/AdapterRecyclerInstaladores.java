@@ -7,16 +7,24 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.gmd.gasnatural.R;
+import com.gmd.gasnatural.data.services.response.EmpresaInstaladora;
+import com.gmd.gasnatural.domain.interactor.EmpresasInstaladorasInteractor;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import butterknife.Bind;
+import butterknife.ButterKnife;
 
 /**
  * Created by tincio on 22/07/2016.
  */
 public class AdapterRecyclerInstaladores extends RecyclerView.Adapter<AdapterRecyclerInstaladores.ViewHolderItem> {
 
-    String[] arrayString;
+    List<EmpresaInstaladora> listaEmpresas;
 
-    public AdapterRecyclerInstaladores(String[] arrayString){
-        this.arrayString = arrayString;
+    public AdapterRecyclerInstaladores(List<EmpresaInstaladora> listaEmpresas){
+        this.listaEmpresas = listaEmpresas;
     }
     @Override
     public ViewHolderItem onCreateViewHolder(ViewGroup parent, int viewType) {
@@ -28,18 +36,28 @@ public class AdapterRecyclerInstaladores extends RecyclerView.Adapter<AdapterRec
     @Override
     public void onBindViewHolder(ViewHolderItem holder, int position) {
         //holder.txtItemRecycler.setText(arrayString[position]);
+        EmpresaInstaladora mEmpresa = listaEmpresas.get(position);
+        holder.txtIdEmpresa.setText(mEmpresa.getIdEmpresaInstaladora());
+        holder.txtNombreEmpresaInstaladora.setText(mEmpresa.getNombreEmpresaInstaladora());
+        holder.txtPrecioEstimado.setText(mEmpresa.getPrecioEstimadoInstalacionTipicaEmpresaInstaladora());
     }
 
     @Override
     public int getItemCount() {
-        return arrayString.length;
+        return listaEmpresas.size();
     }
 
     public class ViewHolderItem extends RecyclerView.ViewHolder {
 
-        TextView txtItemRecycler;
+        @Bind(R.id.txt_idempresa)
+        TextView txtIdEmpresa;
+        @Bind(R.id.txt_nombre_empresainstaladora)
+        TextView txtNombreEmpresaInstaladora;
+        @Bind(R.id.txt_precioestimado)
+        TextView txtPrecioEstimado;
         public ViewHolderItem(View itemView) {
             super(itemView);
+            ButterKnife.bind(this, itemView);
         /*    txtItemRecycler = (TextView)itemView.findViewById(R.id.txt_row_beneficios);
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
