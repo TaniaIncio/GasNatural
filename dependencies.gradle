@@ -7,7 +7,7 @@ ext {
     retrolambdaVersion = '3.2.5'
     volleyVersion = '1.0.19'
     gsonVersion = '2.5'
-    supportDependencies = [
+   supportDependencies = [
             appcompat: "com.android.support:appcompat-v7:${supportLibrayVersion}",
             design      : "com.android.support:design:${supportLibrayVersion}",
             butterknife : "com.jakewharton:butterknife:${butterknifeVersion}",
@@ -17,6 +17,5 @@ ext {
             retrolambda : "me.tatarka:gradle-retrolambda:${retrolambdaVersion}",
             volley : "com.mcxiaoke.volley:library:${volleyVersion}",
             gson: "com.google.code.gson:gson:${gsonVersion}"
-
     ]
 }
