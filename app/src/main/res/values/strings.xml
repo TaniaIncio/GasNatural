@@ -81,4 +81,32 @@
     <string name="btn.si">Si</string>
     <string name="btn.no">No</string>
 
+    <!--slides -->
+    <string name="slidesshow1_view1_tittle">AHORRO</string>
+    <string name="slidesshow1_view1">
+    Con el cas natural ahorras entre el 50% y 90% de tus gastos mensuales.\n
+    ¡Imagina tu ahorro el todo el año!
+    </string>
+    <string name="slidesshow1_view2_tittle">CONTINUIDAD</string>
+
+     <string name="slidesshow1_view2">
+        El gas natural es el único combustible que estará siempre disponible en tu hogar.Olvídate cambiar tu balón de gas cada mes.
+     </string>
+
+    <string name="slidesshow1_view3_tittle">COMODIDAD</string>
+
+    <string name="slidesshow1_view3">
+        Ten tu ropa siempre seca y disfruta del agua caliente para esos días de mucho frio. Usa el gas natural en tu secadora y terma.
+     </string>
+    <string name="slidesshow1_view4_tittle">SEGURIDAD</string>
+
+        <string name="slidesshow1_view4">
+        El gas natural es el combustible más seguro para tu hogar, al ser liviano se disipa muy rápido en el aire</string>
+        <string name="slidesshow1_view5_tittle">MEDIO AMBIENTE</string>
+
+        <string name="slidesshow1_view5">
+        Es el combustible menos contaminante.Con el gas natural contribuirás en la reducción de CO2 y podrás cuidar el medio ambiente.
+        </string>
+
+
 </resources>

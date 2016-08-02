@@ -1,5 +1,6 @@
 package com.gmd.gasnatural.presentation.activity;
 
+import android.content.Intent;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -7,6 +8,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.TextView;
 
 import com.gmd.gasnatural.R;
 import com.gmd.gasnatural.presentation.adapter.CustomPagerAdapter;
@@ -45,6 +47,15 @@ public class SlideActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Log.d("TAG", "prev");
                 mViewPager.setCurrentItem(mViewPager.getCurrentItem() - 1);
+            }
+        });
+
+
+        TextView tv_omitir = (TextView)findViewById(R.id.main_return);
+        tv_omitir.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+             startActivity(new Intent(getApplicationContext(),OpcionesMainActivity.class));
             }
         });
 
