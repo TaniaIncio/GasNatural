@@ -1,7 +1,7 @@
 package com.gmd.gasnatural.presentation.presenter;
 
 /**
- * Created by juan on 25/05/2016.
+ * Created by tincio on 25/05/2016.
  */
 public interface MvpPresenter<V> {
     public void setView(V view);

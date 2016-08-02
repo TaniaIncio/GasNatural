@@ -41,6 +41,17 @@ public class AdapterRecyclerBeneficios extends RecyclerView.Adapter<AdapterRecyc
         public ViewHolderItem(View itemView) {
             super(itemView);
             txtItemRecycler = (TextView)itemView.findViewById(R.id.txt_row_beneficios);
+            itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+
+                }
+            });
         }
+    }
+
+    OnItemClickListener mOnItemClickListener;
+    public interface OnItemClickListener{
+        public void setOnItemClickListener();
     }
 }

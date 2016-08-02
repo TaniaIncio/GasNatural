@@ -1,0 +1,27 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black_transp_65"
+    tools:context="com.gmd.gasnatural.presentation.fragment.ListDistritoFragment">
+
+    <RelativeLayout android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        xmlns:android="http://schemas.android.com/apk/res/android">
+
+        <!--toolbar-->
+        <include layout="@layout/view_distritos"></include>
+        <LinearLayout
+            android:id="@+id/app_bar"
+            android:layout_width="match_parent"
+            android:layout_height="?android:attr/actionBarSize"
+            android:fitsSystemWindows="true"
+            android:theme="@style/AppTheme.AppBarOverlay"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+            <include layout="@layout/toolbar_distritos"></include>
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</FrameLayout>
