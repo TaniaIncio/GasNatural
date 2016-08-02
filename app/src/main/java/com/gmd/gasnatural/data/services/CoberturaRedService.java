@@ -26,11 +26,13 @@ public class CoberturaRedService implements UtilVolleyCallback {
         try{
             Gson gson = new Gson();
             CoberturaServicioGasNaturalOutRO mCoberturaResp = null;
-            JSONObject objJson = new JSONObject(response);
-            JSONObject objJsonFinal = objJson.optJSONObject("coberturaServicioGasNaturalOutRO");
-            if(isError==false)
+            JSONObject objJson = null;
+            JSONObject objJsonFinal = null;
+            if(isError==false){
+                objJson = new JSONObject(response);
+                objJsonFinal = objJson.optJSONObject("coberturaServicioGasNaturalOutRO");
                 mCoberturaResp = gson.fromJson(objJsonFinal.toString(), CoberturaServicioGasNaturalOutRO.class);
-
+            }
             mCallback.onCallbackVerificarRed(mCoberturaResp, response);
         }catch(Exception e){
             e.printStackTrace();

@@ -27,6 +27,7 @@ public class SolicitarVisitaActivity extends AppCompatActivity implements View.O
         setContentView(R.layout.activity_solicitar_visita);
         getSupportActionBar().hide();
         ButterKnife.bind(this);
+        linearSolicitarVisita.setOnClickListener(this);
     }
 
     @Override
