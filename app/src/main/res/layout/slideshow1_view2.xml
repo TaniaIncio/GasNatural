@@ -12,20 +12,20 @@
             android:layout_height="wrap_content"
             android:textColor="#0092d3"
             android:text="@string/slidesshow1_view2_tittle"
-            android:textSize="@dimen/sp_text_slides"
-            android:layout_alignParentTop="true"
+            android:layout_above="@+id/imageView"
             android:layout_centerHorizontal="true"
-            android:id="@+id/textView"
-            android:layout_margin="20dp" />
+            android:textSize="@dimen/sp_text_slides"
+            android:layout_margin="20dp"
+            />
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
             android:src="@mipmap/slide2"
             android:id="@+id/imageView"
-            android:paddingBottom="10dp"
-            android:layout_below="@+id/textView"
-            android:layout_centerHorizontal="true" />
+            android:paddingBottom="10dp" />
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
