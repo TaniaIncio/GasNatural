@@ -34,15 +34,15 @@ public class SolicitarVisitaActivity extends AppCompatActivity implements View.O
         super.onResume();
         Bundle extras = getIntent().getExtras();
 
-        if(extras.getString("gas").equals("S")){
+        if(extras.getString("gas","").equals("S")){
             txtMensajeSuperior.setText(getString(R.string.title_red_gas));
             txtMensajeInferior.setText(getString(R.string.title_solicitar_visita));
         }else{
-            if(extras.getString("promocion").equals("S")){
+            if(extras.getString("promocion","").equals("S")){
                 txtMensajeSuperior.setText(getString(R.string.title_red_gas_promocion));
                 txtMensajeInferior.setText(getString(R.string.title_solicitar_visita_promocion));
             }else{
-                if(extras.getString("fise").equals("S")){
+                if(extras.getString("fise","").equals("S")){
                     txtMensajeSuperior.setText(getString(R.string.title_red_gas_fise));
                     txtMensajeInferior.setText(getString(R.string.title_solicitar_visita_fise));
                 }else{

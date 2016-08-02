@@ -28,8 +28,8 @@ public class MensajeVerificandoActivity extends AppCompatActivity implements Men
     protected void onResume() {
         super.onResume();
         Bundle extras = getIntent().getExtras();
-        presenter.getVerificarRed(setCobertura(extras.getString("latitud"),
-                extras.getString("longitud")));
+        presenter.getVerificarRed(setCobertura(extras.getDouble("latitud"),
+                extras.getDouble("longitud")));
     }
 
     @Override
@@ -51,11 +51,11 @@ public class MensajeVerificandoActivity extends AppCompatActivity implements Men
     }
 
 
-    public CoberturaServicioGasNaturalInRO setCobertura(String latitud, String longitud){
+    public CoberturaServicioGasNaturalInRO setCobertura(Double latitud, Double longitud){
         CoberturaServicioGasNaturalInRO mCobertura = new CoberturaServicioGasNaturalInRO();
         mCobertura.setCantidadMetros(50);
-        mCobertura.setCoordenadaX(latitud);
-        mCobertura.setCoordenadaY(longitud);
+        mCobertura.setCoordenadaX(latitud.toString());
+        mCobertura.setCoordenadaY(longitud.toString());
         mCobertura.setToken("0000");
         return mCobertura;
     }

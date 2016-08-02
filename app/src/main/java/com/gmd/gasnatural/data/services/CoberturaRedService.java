@@ -4,6 +4,8 @@ import com.gmd.gasnatural.data.services.response.CoberturaServicioGasNaturalOutR
 import com.gmd.gasnatural.presentation.util.Constants;
 import com.google.gson.Gson;
 
+import org.json.JSONObject;
+
 /**
  * Created by tincio on 01/08/2016.
  */
@@ -21,11 +23,18 @@ public class CoberturaRedService implements UtilVolleyCallback {
 
     @Override
     public void onResponse(String response, Boolean isError) {
-        Gson gson = new Gson();
-        CoberturaServicioGasNaturalOutRO mCoberturaResp = null;
-        if(isError==false)
-            mCoberturaResp = gson.fromJson(response, CoberturaServicioGasNaturalOutRO.class);
+        try{
+            Gson gson = new Gson();
+            CoberturaServicioGasNaturalOutRO mCoberturaResp = null;
+            JSONObject objJson = new JSONObject(response);
+            JSONObject objJsonFinal = objJson.optJSONObject("coberturaServicioGasNaturalOutRO");
+            if(isError==false)
+                mCoberturaResp = gson.fromJson(objJsonFinal.toString(), CoberturaServicioGasNaturalOutRO.class);
 
-        mCallback.onCallbackVerificarRed(mCoberturaResp, response);
+            mCallback.onCallbackVerificarRed(mCoberturaResp, response);
+        }catch(Exception e){
+            e.printStackTrace();
+        }
+
     }
 }

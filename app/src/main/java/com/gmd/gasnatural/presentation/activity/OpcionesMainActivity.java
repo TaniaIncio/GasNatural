@@ -99,6 +99,12 @@ public class OpcionesMainActivity extends AppCompatActivity implements OpcionesM
                 intent.putExtra("latitud", place.getLatLng().latitude);
                 intent.putExtra("longitud", place.getLatLng().longitude);
                 startActivity(intent);
+            }else{
+              //  Place place = PlacePicker.getPlace(data, this);
+                Intent intent = new Intent(this,MensajeVerificandoActivity.class);
+                intent.putExtra("latitud", 12.11111);
+                intent.putExtra("longitud", 12.12345);
+                startActivity(intent);
             }
         }
     }
