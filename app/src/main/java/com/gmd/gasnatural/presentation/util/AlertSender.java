@@ -39,10 +39,10 @@ public class AlertSender {
 				.setPositiveButton("Ok", new DialogInterface.OnClickListener() {
 					public void onClick(@SuppressWarnings("unused") final DialogInterface dialog, @SuppressWarnings("unused") final int id) {
 						try {
-							if (callBackName != null) {
+							/*if (callBackName != null) {
 								Method method = activity.getClass().getMethod(callBackName[0]);
 								method.invoke(activity);
-							}
+							}*/
 						} catch (Exception e) {
 							e.printStackTrace();
 						}
@@ -70,5 +70,13 @@ public class AlertSender {
 		}
 	}
 
+	public static ProgressDialog showProgressDialog(Context ctx, String title, String msg) {
+		ProgressDialog dialog;
+		dialog=ProgressDialog.show(ctx, title, msg);
+		dialog.getWindow().setBackgroundDrawable(new ColorDrawable(android.graphics.Color.TRANSPARENT));
+		dialog.setContentView(R.layout.progress_layout);
+
+		return dialog;
+	}
 
 }

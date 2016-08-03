@@ -67,7 +67,8 @@ public class OpcionesMainActivity extends AppCompatActivity implements OpcionesM
         switch (v.getId()){
             case R.id.linear_verficar_red:
                 //showMapUbicacion();
-                startActivity(new Intent(getApplicationContext(),SlideActivity.class));
+                //startActivity(new Intent(getApplicationContext(),SlideActivity.class));
+                startActivity(new Intent(getApplicationContext(),DetalleEmpresaInstaladoraActivity.class));
 
                 break;
         }

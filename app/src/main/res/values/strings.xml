@@ -18,7 +18,7 @@
     <string name="btn_solicitar_visita">Solicitar visita</string>
     <string name="btn_solicitar_ahorro">Calcular Ahorro</string>
     <string name="btn_continuar">Continuar</string>
-
+    <string name="btn_seleccionar_instalador">Seleccionar instalador</string>
 
     <!--titulos intro app-->
     <string name="titulo_slide1">AHORRO</string>
@@ -65,6 +65,15 @@
     <!--titulos activitys-->
     <string name="titulo_lista_instaladores">Lista de Instaladores</string>
     <string name="titulo_filtros">Filtros</string>
+    <!--pantalla detalle empresa-->
+    <string name="txt_activitydetalleempresa_nombreempresa">Nombre de la empresa</string>
+    <string name="txt_activitydetalleempresa_nroruc">Número de RUC</string>
+    <string name="txt_activitydetalleempresa_tipoinstalacion">Tipo de instalación</string>
+    <string name="txt_activitydetalleempresa_direccion">Dirección</string>
+    <string name="txt_activitydetalleempresa_telefono">Teléfono(s)</string>
+    <string name="txt_activitydetalleempresa_correo">Correo Electrónico</string>
+    <string name="txt_activitydetalleempresa_sitioweb">Sitio Web</string>
+    <string name="txt_activitydetalleempresa_servicios">Servicio(s) Adicional(es)</string>
 
 
     titulo_lista_instaladores
@@ -102,7 +111,7 @@
 
         <string name="slidesshow1_view4">
         El gas natural es el combustible más seguro para tu hogar, al ser liviano se disipa muy rápido en el aire</string>
-        <string name="slidesshow1_view5_tittle">MEDIO AMBIENTE</string>
+    <string name="slidesshow1_view5_tittle">MEDIO AMBIENTE</string>
 
         <string name="slidesshow1_view5">
         Es el combustible menos contaminante.Con el gas natural contribuirás en la reducción de CO2 y podrás cuidar el medio ambiente.

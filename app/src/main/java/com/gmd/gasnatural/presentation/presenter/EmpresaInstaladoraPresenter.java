@@ -26,11 +26,13 @@ public class EmpresaInstaladoraPresenter implements MvpPresenter<ListaInstalador
 
     /**Para verificar si la red pasa por tu vivienda*/
     public void getListaEmpresasInstaladoras(EmpresaInstaladoraInRO mEmpresa){
+        view.showLoading();
         interactor.getListaEmpresasInstaladoras(mEmpresa);
     }
 
     @Override
     public void onResponse(EmpresasInstaladorasOutRO objEmpresas, String message) {
+        view.closeLoading();
         view.showEmpresasInstaladorasOutRO(objEmpresas, message);
     }
     /***Fin verificar red*/

@@ -49,7 +49,8 @@
             android:name=".presentation.content_provider.MySuggestionProvider"
             android:authorities="com.gmd.gasnatural.presentation.content_provider.MySuggestionProvider" />
 
-        <activity android:name=".presentation.activity.SlideActivity"></activity>
+        <activity android:name=".presentation.activity.SlideActivity" />
+        <activity android:name=".presentation.activity.DetalleEmpresaInstaladoraActivity"></activity>
     </application>
 
 </manifest>

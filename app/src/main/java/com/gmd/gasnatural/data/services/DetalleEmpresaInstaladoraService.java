@@ -1,5 +1,7 @@
 package com.gmd.gasnatural.data.services;
 import com.gmd.gasnatural.data.services.request.EmpresaInstaladoraInRO;
+import com.gmd.gasnatural.data.services.request.EmpresaInstaladoraSeleccionadaInRO;
+import com.gmd.gasnatural.data.services.response.EmpresaInstaladoraSeleccionadaOutRO;
 import com.gmd.gasnatural.data.services.response.EmpresasInstaladorasOutRO;
 import com.gmd.gasnatural.presentation.util.Constants;
 import com.google.gson.Gson;
@@ -9,13 +11,13 @@ import org.json.JSONObject;
 /**
  * Created by tincio on 01/08/2016.
  */
-public class EmpresaInstaladoraService implements UtilVolleyCallback {
+public class DetalleEmpresaInstaladoraService implements UtilVolleyCallback {
 
-    EmpresaInstaladoraServiceCallback mCallback;
-    public void getListaEmpresasInstaladoras(EmpresaInstaladoraInRO mEmpresa, EmpresaInstaladoraServiceCallback mCallback){
+    DetalleEmpresaInstaladoraServiceCallback mCallback;
+    public void getListaEmpresasInstaladoras(EmpresaInstaladoraSeleccionadaInRO mEmpresa, DetalleEmpresaInstaladoraServiceCallback mCallback){
         try{
             this.mCallback = mCallback;
-            UtilVolley.getRequestWithPOST(Constants.Servicios.POST_LISTAR_EMPRESAS_INSTALADORAS, mEmpresa.toJSON(),this);
+            UtilVolley.getRequestWithPOST(Constants.Servicios.POST_OBTENER_EMPRESA_INSTALADORA, mEmpresa.toJSON(),this);
         }catch(Exception e){
             throw e;
         }
@@ -25,16 +27,15 @@ public class EmpresaInstaladoraService implements UtilVolleyCallback {
     public void onResponse(String response, Boolean isError) {
         try{
             Gson gson = new Gson();
-            EmpresasInstaladorasOutRO mCoberturaResp = null;
+            EmpresaInstaladoraSeleccionadaOutRO mEmpresaResp = null;
             JSONObject objJson =null;
             JSONObject objJsonFinal = null;
             if(isError==false){
                 objJson = new JSONObject(response);
                 objJsonFinal = objJson.optJSONObject("empresaInstaladora");
-                mCoberturaResp = gson.fromJson(objJsonFinal.toString(), EmpresasInstaladorasOutRO.class);
+                mEmpresaResp = gson.fromJson(objJsonFinal.toString(), EmpresaInstaladoraSeleccionadaOutRO.class);
             }
-
-            mCallback.onCallbackEmpresaInstaladora(mCoberturaResp, response);
+            mCallback.onCallbackDetalleEmpresaInstaladora(mEmpresaResp, response);
         }catch(Exception e){
             e.printStackTrace();
         }

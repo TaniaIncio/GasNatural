@@ -9,4 +9,6 @@ import com.gmd.gasnatural.data.services.response.EmpresasInstaladorasOutRO;
 public interface ListaInstaladoresView extends MvpView {
 
     public void showEmpresasInstaladorasOutRO(EmpresasInstaladorasOutRO mEmpresasInstaladorasOutRO, String message);
+    void showLoading();
+    void closeLoading();
 }

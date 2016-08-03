@@ -1,5 +1,6 @@
 package com.gmd.gasnatural.presentation.activity;
 
+import android.app.ProgressDialog;
 import android.app.SearchManager;
 import android.content.Context;
 import android.content.Intent;
@@ -17,9 +18,11 @@ import android.widget.TextView;
 
 import com.gmd.gasnatural.R;
 import com.gmd.gasnatural.data.services.request.EmpresaInstaladoraInRO;
+import com.gmd.gasnatural.data.services.response.EmpresaInstaladora;
 import com.gmd.gasnatural.data.services.response.EmpresasInstaladorasOutRO;
 import com.gmd.gasnatural.presentation.adapter.AdapterRecyclerInstaladores;
 import com.gmd.gasnatural.presentation.presenter.EmpresaInstaladoraPresenter;
+import com.gmd.gasnatural.presentation.util.AlertSender;
 import com.gmd.gasnatural.presentation.view.ListaInstaladoresView;
 
 import butterknife.Bind;
@@ -36,6 +39,7 @@ public class ListaInstaladoresActivity extends AppCompatActivity implements List
     AdapterRecyclerInstaladores adapterInstaladores;
     RecyclerView.LayoutManager mLayoutManager;
     EmpresaInstaladoraPresenter presenter;
+    ProgressDialog mProgress;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,14 +50,6 @@ public class ListaInstaladoresActivity extends AppCompatActivity implements List
         ButterKnife.bind(this);
         presenter = new EmpresaInstaladoraPresenter();
         presenter.setView(this);
-    }
-
-    @Override
-    protected void onResume() {
-        super.onResume();
-        txtTituloToolbar.setText(getResources().getString(R.string.titulo_lista_instaladores));
-        mLayoutManager = new LinearLayoutManager(getApplicationContext(),LinearLayoutManager.VERTICAL,false);
-        recInstaladores.setLayoutManager(mLayoutManager);
         /****/
         EmpresaInstaladoraInRO mEmpresa = new EmpresaInstaladoraInRO();
         mEmpresa.setToken("");
@@ -63,7 +59,14 @@ public class ListaInstaladoresActivity extends AppCompatActivity implements List
         mEmpresa.setUbigeoEmpresaInstaladora("150135");
         mEmpresa.setTipoPersonaEmpresaInstaladora("J");
         presenter.getListaEmpresasInstaladoras(mEmpresa);
+    }
 
+    @Override
+    protected void onResume() {
+        super.onResume();
+        txtTituloToolbar.setText(getResources().getString(R.string.titulo_lista_instaladores));
+        mLayoutManager = new LinearLayoutManager(getApplicationContext(),LinearLayoutManager.VERTICAL,false);
+        recInstaladores.setLayoutManager(mLayoutManager);
     }
 
     @Override
@@ -124,10 +127,34 @@ public class ListaInstaladoresActivity extends AppCompatActivity implements List
         if(mEmpresasInstaladorasOutRO.getResultCode()==1)
             adapterInstaladores = new AdapterRecyclerInstaladores(mEmpresasInstaladorasOutRO.getEmpresasInstaladoras());
         recInstaladores.setAdapter(adapterInstaladores);
+        setEventClickItemList();
+    }
+
+    @Override
+    public void showLoading() {
+        mProgress= AlertSender.showProgressDialog(this,"","");
+    }
+
+    @Override
+    public void closeLoading() {
+        mProgress.dismiss();
     }
 
     @Override
     public Context getContext() {
         return this;
+    }
+
+    public void setEventClickItemList(){
+        try{
+            adapterInstaladores.setOnItemClickListener(new AdapterRecyclerInstaladores.OnItemClickListener() {
+                @Override
+                public void setOnItemClickListener(EmpresaInstaladora mEmpresa) {
+                    startActivity(new Intent(getApplicationContext(), DetalleEmpresaInstaladoraActivity.class));
+                }
+            });
+        }catch(Exception e){
+
+        }
     }
 }

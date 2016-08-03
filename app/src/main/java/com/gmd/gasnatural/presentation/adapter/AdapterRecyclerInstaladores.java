@@ -4,6 +4,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.gmd.gasnatural.R;
@@ -37,7 +38,7 @@ public class AdapterRecyclerInstaladores extends RecyclerView.Adapter<AdapterRec
     public void onBindViewHolder(ViewHolderItem holder, int position) {
         //holder.txtItemRecycler.setText(arrayString[position]);
         EmpresaInstaladora mEmpresa = listaEmpresas.get(position);
-        holder.txtIdEmpresa.setText(mEmpresa.getIdEmpresaInstaladora());
+        holder.txtIdEmpresa.setText(mEmpresa.getIdEmpresaInstaladora().toString());
         holder.txtNombreEmpresaInstaladora.setText(mEmpresa.getNombreEmpresaInstaladora());
         holder.txtPrecioEstimado.setText(mEmpresa.getPrecioEstimadoInstalacionTipicaEmpresaInstaladora());
     }
@@ -55,21 +56,33 @@ public class AdapterRecyclerInstaladores extends RecyclerView.Adapter<AdapterRec
         TextView txtNombreEmpresaInstaladora;
         @Bind(R.id.txt_precioestimado)
         TextView txtPrecioEstimado;
+        @Bind(R.id.linear_row_instalador)
+        LinearLayout linearRowInstalador;
         public ViewHolderItem(View itemView) {
             super(itemView);
             ButterKnife.bind(this, itemView);
-        /*    txtItemRecycler = (TextView)itemView.findViewById(R.id.txt_row_beneficios);
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-
+                    mOnItemClickListener.setOnItemClickListener(listaEmpresas.get(getPosition()));
                 }
-            });*/
+            });
+            linearRowInstalador.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    mOnItemClickListener.setOnItemClickListener(listaEmpresas.get(getPosition()));
+                }
+            });
         }
     }
 
     OnItemClickListener mOnItemClickListener;
     public interface OnItemClickListener{
-        public void setOnItemClickListener();
+        public void setOnItemClickListener(EmpresaInstaladora mEmpresa);
     }
+
+    public void setOnItemClickListener(OnItemClickListener mItemClickListener){
+        this.mOnItemClickListener = mItemClickListener;
+    }
+
 }

@@ -15,6 +15,7 @@
     <dimen name="sp_rowrecyclerinstalador_costobasico">14sp</dimen>
     <dimen name="sp_activityfiltro_titulos">17sp</dimen>
     <dimen name="sp_texto_contentdomicilio_distrito">16sp</dimen>
+    <dimen name="sp_text_detalle_empresasinstaladoras">16sp</dimen>
 
     <!--padding layout-->
     <dimen name="padd_layout_verificar">17dp</dimen>
@@ -32,6 +33,9 @@
     <dimen name="marg_bottom_registronroinstalador">2dp</dimen>
     <dimen name="marg_left_rowrecyclerinstalador_registro">7dp</dimen>
     <dimen name="marg_contentdomicilio">15dp</dimen>
+    <dimen name="marg_detalleempresainstaladora_rightleft">20dp</dimen>
+    <dimen name="marg_detalleempresainstaladora_top">12dp</dimen>
+    <dimen name="marg_titulodetalle_bottom">4dp</dimen>
 
     <!--radius-->
     <dimen name="rad_caja_busqueda">8dp</dimen>
@@ -44,5 +48,5 @@
     <dimen name="activity_vertical_margin">16dp</dimen>
     <dimen name="height_separator">1dp</dimen>
 
-    <dimen name= "sp_text_slides"> 16sp</dimen>
+    <dimen name="sp_text_slides">16sp</dimen>
 </resources>

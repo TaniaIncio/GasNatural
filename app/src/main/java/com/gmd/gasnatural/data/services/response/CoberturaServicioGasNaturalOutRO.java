@@ -20,7 +20,7 @@ public class CoberturaServicioGasNaturalOutRO {
     private String resultadoIndMecanismoPromocion;
     @SerializedName("ubigeo")
     @Expose
-    private Integer ubigeo;
+    private String ubigeo;
 
     /**
      * 
@@ -99,7 +99,7 @@ public class CoberturaServicioGasNaturalOutRO {
      * @return
      *     The ubigeo
      */
-    public Integer getUbigeo() {
+    public String getUbigeo() {
         return ubigeo;
     }
 
@@ -108,7 +108,7 @@ public class CoberturaServicioGasNaturalOutRO {
      * @param ubigeo
      *     The ubigeo
      */
-    public void setUbigeo(Integer ubigeo) {
+    public void setUbigeo(String ubigeo) {
         this.ubigeo = ubigeo;
     }
 
