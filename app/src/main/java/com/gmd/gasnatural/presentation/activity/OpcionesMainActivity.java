@@ -1,11 +1,14 @@
 package com.gmd.gasnatural.presentation.activity;
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
+import android.transition.Slide;
+import android.util.Log;
 import android.view.View;
 import android.widget.LinearLayout;
 
@@ -46,6 +49,19 @@ public class OpcionesMainActivity extends AppCompatActivity implements OpcionesM
         recBeneficios.setLayoutManager(mLayoutManager);
         presenter = new OpcionesMainPresenter();
         presenter.setView(this);
+        SharedPreferences pref = getSharedPreferences("ActivityPREF", Context.MODE_PRIVATE);
+        Log.d("Tag",Boolean.toString(pref.getBoolean("activity_executed",true)));
+
+        if (pref.getBoolean("activity_executed", true)) {
+            Intent intent = new Intent(this, SlideActivity.class);
+            startActivity(intent);
+            finish();
+        }
+
+
+
+
+
 
     }
 
@@ -66,9 +82,8 @@ public class OpcionesMainActivity extends AppCompatActivity implements OpcionesM
     public void onClick(View v) {
         switch (v.getId()){
             case R.id.linear_verficar_red:
-                //showMapUbicacion();
+                showMapUbicacion();
                 //startActivity(new Intent(getApplicationContext(),SlideActivity.class));
-                startActivity(new Intent(getApplicationContext(),DetalleEmpresaInstaladoraActivity.class));
 
                 break;
         }

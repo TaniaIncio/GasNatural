@@ -16,7 +16,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:id="@+id/viewPager"
-        >
+            android:layout_alignParentBottom="true">
         </android.support.v4.view.ViewPager>
         <com.viewpagerindicator.CirclePageIndicator
             android:id="@+id/indicator"
@@ -29,7 +29,8 @@
             app:centered="true"
             app:fillColor="#0092d3"
             app:pageColor='@color/titulo_gris'
-            app:snap="false" />
+            app:snap="false"
+            android:background="@color/white" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -40,6 +41,7 @@
             android:textColor="#0092d3"
             android:textSize="20sp"
             android:padding="10dp"
+            android:background="@drawable/selector_button_aplicar"
             android:layout_alignParentTop="true"
             android:layout_alignParentRight="true"
             android:layout_alignParentEnd="true" />
@@ -62,11 +64,12 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Siguiente"
+        android:minHeight="?android:attr/listPreferredItemHeight"
         android:id="@+id/bt_next"
         android:padding="0dp"
         android:textColor="@android:color/white"
         android:layout_alignParentBottom="true"
-        android:background="#0092d3" />
+        android:background="@drawable/selector_button_verificar" />
 
 
 
