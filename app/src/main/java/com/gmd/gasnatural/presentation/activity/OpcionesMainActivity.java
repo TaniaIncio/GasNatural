@@ -73,10 +73,11 @@ public class OpcionesMainActivity extends AppCompatActivity implements OpcionesM
         mAdapterBeneficios.setOnItemClickListener(new AdapterRecyclerBeneficios.OnItemClickListener() {
             @Override
             public void setOnItemClickListener(int posicion) {
-                if (posicion == 0 )
-                {
+                if (posicion==0)
                     startActivity(new Intent(getApplicationContext(),SlideActivity.class));
-                }
+                else if (posicion==1)
+                    startActivity(new Intent(getApplicationContext(),AhorroActivity.class));
+
             }
         });
     }
