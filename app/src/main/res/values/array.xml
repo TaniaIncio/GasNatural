@@ -10,4 +10,16 @@
         <item>@string/titulo_fise</item>
         <item>@string/titulo_quejas</item>
     </array>
+    <!--tipo instalacion-->
+    <array name="array_tipoinstalacion">
+        <item>@string/titulo_beneficios</item>
+        <item>@string/titulo_calculadora</item>
+        <item>@string/titulo_procesoinstalacion</item>
+        <item>@string/titulo_costoinstalacion</item>
+        <item>@string/titulo_listaconcesionarios</item>
+        <item>@string/titulo_orienta</item>
+        <item>@string/titulo_fise</item>
+        <item>@string/titulo_quejas</item>
+    </array>
+
 </resources>

@@ -13,6 +13,11 @@
     <string name="titulo_quejas">Quejas al servicio</string>
     <string name="titulo_fise">Beneficios FISE</string>
 
+    <!--array tipo instalacion-->
+    <string name="tipoinstalacion_01">IG1-Instalaciones internas residenciales y comerciales</string>
+    <string name="tipoinstalacion_02">IG2-Instalaciones internas residenciales y comerciales(Sin límite de consumo)</string>
+    <string name="tipoinstalacion_03">IG1-Instalaciones internas residenciales,comerciales e industriales</string>
+
     <!--titulo de botones-->
     <string name="btn_verificar_red">Verificar si la red pasa por mi casa</string>
     <string name="btn_solicitar_visita">Solicitar visita</string>
