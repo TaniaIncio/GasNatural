@@ -31,6 +31,15 @@ tools:context="com.gmd.gasnatural.presentation.activity.AhorroActivity">
                 android:layout_height="wrap_content"
                 android:src="@mipmap/calculadora_ahorro"
                 android:scaleType="centerCrop"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/titulo_calculadora_ahorro"
+                android:textSize="36sp"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true" />
+
+
             <android.support.v7.widget.Toolbar
                 android:id="@+id/toolbar"
                 android:layout_width="match_parent"
@@ -58,16 +67,17 @@ tools:context="com.gmd.gasnatural.presentation.activity.AhorroActivity">
         android:textColor="@android:color/white"
         android:textStyle="bold"
         android:textSize="@dimen/txt_btn_verificar"
-        android:text="@string/btn_verificar_red"/>
+        android:text="@string/btn_solicitar_ahorro"/>
 </LinearLayout>
 
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:layout_marginBottom="63dp"
+        android:id="@+id/linearLayout"
         android:layout_above="@+id/linear_verficar_red"
-        android:layout_alignParentLeft="true">
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -80,13 +90,13 @@ tools:context="com.gmd.gasnatural.presentation.activity.AhorroActivity">
                 android:textColor="@color/linear_mensaje"
 
                 />
-            <TextView
+            <EditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="@string/dias_placeholder"
                 android:textSize="36sp"
                 android:textColorHint="@android:color/darker_gray"
-                />
+                 />
 
         </LinearLayout>
 
@@ -103,15 +113,19 @@ tools:context="com.gmd.gasnatural.presentation.activity.AhorroActivity">
                 android:textColor="@color/linear_mensaje"
 
                 />
-            <TextView
+            <EditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="@string/precio_placeholder"
                 android:textSize="36sp"
                 android:textColorHint="@android:color/darker_gray"
-                />
+                 />
 
         </LinearLayout>
 
     </LinearLayout>
+
+
+
+
 </RelativeLayout>

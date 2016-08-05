@@ -82,6 +82,10 @@
     <string name="dias_placeholder">Duración del balón</string>
     <string name="dias">Días</string>
     <string name="precio">Precio</string>
+    <string name="titulo_calculadora_ahorro">Calculadora del ahorro</string>
+    <string name="descripcion_calculadora_ahorro">Compará cúanto podrías ahorrar con el uso del gas natural</string>
+
+
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>

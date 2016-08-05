@@ -50,7 +50,8 @@
             android:authorities="com.gmd.gasnatural.presentation.content_provider.MySuggestionProvider" />
 
         <activity android:name=".presentation.activity.SlideActivity" />
-        <activity android:name=".presentation.activity.AhorroActivity" />
+        <activity android:name=".presentation.activity.AhorroActivity"
+                  android:theme="@style/AppTheme.NoActionBar"/>
         <activity android:name=".presentation.activity.DetalleEmpresaInstaladoraActivity"></activity>
     </application>
 
