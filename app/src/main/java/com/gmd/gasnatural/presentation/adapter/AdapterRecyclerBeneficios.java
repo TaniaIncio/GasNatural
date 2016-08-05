@@ -44,7 +44,9 @@ public class AdapterRecyclerBeneficios extends RecyclerView.Adapter<AdapterRecyc
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-
+                    if(mOnItemClickListener!=null){
+                        mOnItemClickListener.setOnItemClickListener(getPosition());
+                    }
                 }
             });
         }
@@ -52,6 +54,12 @@ public class AdapterRecyclerBeneficios extends RecyclerView.Adapter<AdapterRecyc
 
     OnItemClickListener mOnItemClickListener;
     public interface OnItemClickListener{
-        public void setOnItemClickListener();
+        public void setOnItemClickListener(int posicion);
     }
+
+    public void setOnItemClickListener(OnItemClickListener mItemClickListener){
+        this.mOnItemClickListener = mItemClickListener;
+    }
+
 }
+

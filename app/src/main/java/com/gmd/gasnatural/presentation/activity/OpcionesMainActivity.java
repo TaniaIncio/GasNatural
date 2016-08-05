@@ -57,12 +57,6 @@ public class OpcionesMainActivity extends AppCompatActivity implements OpcionesM
             startActivity(intent);
             finish();
         }
-
-
-
-
-
-
     }
 
     @Override
@@ -76,6 +70,16 @@ public class OpcionesMainActivity extends AppCompatActivity implements OpcionesM
     public void showListOpciones(String[] opciones) {
         mAdapterBeneficios = new AdapterRecyclerBeneficios(opciones);
         recBeneficios.setAdapter(mAdapterBeneficios);
+        mAdapterBeneficios.setOnItemClickListener(new AdapterRecyclerBeneficios.OnItemClickListener() {
+            @Override
+            public void setOnItemClickListener(int posicion) {
+                if (posicion==0)
+                    startActivity(new Intent(getApplicationContext(),SlideActivity.class));
+                else if (posicion==1)
+                    startActivity(new Intent(getApplicationContext(),AhorroActivity.class));
+
+            }
+        });
     }
 
     @Override
